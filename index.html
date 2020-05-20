@@ -1,0 +1,120 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Custom styles CSS -->
+    <link rel="stylesheet" href="dist/styles.min.css">
+    <title>Evaluation assignment</title>
+</head>
+
+<body onload="init()">
+
+    <!-- Navigation bar start here -->
+    <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark bg-dark-mode">
+        <div class="container">
+            <a class="navbar-brand" href="#">Kvothe's Books</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav nav-center-md-down">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">News <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#searchBook">Books <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Events <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <!-- Navigation bar ends here -->
+
+    <!-- Header section start here -->
+    <header class="header-cover container-fluid no-padding">
+        <div class="img-cover">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-sm-12">
+                        <div class="card">
+                            <h1>You haven't read anything yet</h1>
+                            <p>They say outside of a dog, a book is man's best friend (inside of a dog it's too dark to
+                                read). Come in, chat with us, share your favorite books & films and we'll introduce you
+                                to some of greatest friend you'll ever know</p>
+                            <div class="row">
+                                <div class="col-12 text-center">
+                                    <button type="button" class="btn btn-success">Come to visit us!</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header section ends here -->
+
+    <!-- Main content start here -->
+    <div class="container">
+        <div id="searchBook" class="row">
+            <form class="col-12 justify-content-center" onSubmit="return false;">
+                <div class="form-row align-items-center">
+                    <div class="searchCtrl">
+                        <label class="sr-only" for="searchBookInput">Search</label>
+                        <input type="text" class="form-control mb-2" id="searchBookInput"
+                            placeholder="Search book here.." name="serchInput" onkeypress="searchBookByEnter(event, this.form)">
+                        <button type="button" class="btn btn-success mb-2" onclick="searchBook(this.form)">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="searchBookResult" class="row"></div>
+    </div>
+    <!-- Main content ends here -->
+
+    <!-- Footer start here -->
+    <footer class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p>2020 © Created by Manuel Martinez Fernandez | 
+                        <a href="mailto:webmaster@example.com">mfernandez.uidev@gmail.com</a> </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer ends here -->
+
+    <!-- IMPORTANT: The next JavaScript are required to use Bootstrap JS -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="./js/searchBook.js"></script>
+</body>
+
+</html>

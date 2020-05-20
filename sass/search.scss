@@ -1,0 +1,64 @@
+@import './util/colors.scss';
+
+%contentEllipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+#searchBook{
+    background-color: $grey;
+    margin: 15px auto;
+
+    form { 
+        .form-row {
+            padding-top: .5rem;
+        }
+    }
+    .searchCtrl{
+        display: flex;
+        margin: 0 auto;
+    }
+}
+
+#searchBookResult{
+    & > div {
+        align-items: stretch;
+        display: flex;
+        @media only screen and (min-width: 768px){
+            margin-bottom: 1rem;
+        }
+    }
+    .bookItem {
+        border: 1px solid silver;
+        display: flex;
+        flex-basis: 100%;
+        .bookCover {
+            background-color: silver;
+            min-height: 178px;
+            width: 33.4%;
+        }
+        .bookDesc {
+            flex-basis: 66.6%;
+            padding: 0.5rem;
+            h3 {
+                font-size: 1.2rem;
+                margin: 0;
+                @extend %contentEllipsis;
+
+                // @media only screen and (min-width: 1200px){
+                //     max-width: 212px;
+                // }
+            }
+            p{
+                @extend %contentEllipsis;
+                &:first-child{
+                    font-size: 0.7rem;
+                }
+            }
+        }
+    }
+}
+

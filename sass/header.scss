@@ -1,0 +1,21 @@
+header.header-cover{
+    position: relative;
+    .img-cover {
+        width: 100%;
+        height: 700px;
+        background-image: url('./../img/header-asset-min.jpg');
+        background-size: cover;
+        background-position: top;
+    }
+    .card{
+        color: white;
+        background-color: rgba(0,0,0,0.7);
+        padding: 25px;
+        top: 250px;
+
+        @media only screen and (min-width: 992px){
+            position: absolute;
+        }
+    }
+
+}

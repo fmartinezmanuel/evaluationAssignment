@@ -1,0 +1,26 @@
+.bg-dark-mode {
+    background-color: rgba(0,0,0,0.7);
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+}
+
+.navbar-brand {
+    font-family: 'Georgia';
+    font-weight: bold;
+}
+
+ul {
+    &.nav-center-md-down {
+        margin-left: auto;
+        // This adjust align the items inside the hamburguer menu.
+        @media only screen and (max-width: 991px){
+            text-align: center;
+        }
+        li:not(:last-child){
+            @media only screen and (min-width: 992px){
+                margin-right: 50px;
+            }
+        }
+    }
+}

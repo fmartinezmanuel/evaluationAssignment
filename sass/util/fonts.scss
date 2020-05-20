@@ -1,0 +1,12 @@
+$fontPath: './../fonts/';
+
+@font-face {
+	font-family: 'Georgia';
+	src: url( $fontPath + 'georgiab.eot');
+    src: local('☺'), 
+         url( $fontPath + 'georgiab.woff') format('woff'), 
+         url( $fontPath + 'georgiab.ttf') format('truetype'), 
+         url( $fontPath + 'georgiab.svg') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}

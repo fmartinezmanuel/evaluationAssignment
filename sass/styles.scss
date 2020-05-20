@@ -1,0 +1,24 @@
+@import './util/fonts.scss';
+@import './navbar.scss';
+@import './header.scss';
+@import './search.scss';
+@import './footer.scss';
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    min-width: 320px;
+}
+
+h1{
+    font-weight: bold;
+}
+
+// Util class after this line..
+.no {
+    &-padding {
+        padding: 0;
+    }
+}
